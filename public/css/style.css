@@ -1,0 +1,239 @@
+@import url("https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap");
+
+body {
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffd8ad;
+}
+
+.navbar {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #56112e;
+}
+
+.navbar-brand {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-left: 20px;
+    font-family: "Montserrat", sans-serif;
+    color: #ffd8ad;
+}
+
+.nav-link {
+    font-family: "Montserrat", sans-serif;
+    padding: 10px 15px;
+    font-weight: 500;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 20px;
+    color: #ffd8ad;
+}
+
+.nav-link:hover {
+    color: black;
+}
+
+/* section 3 styles */
+.section3 {
+    margin: 2%;
+}
+
+.section3 h1 {
+    text-align: center;
+    margin: 2% 0;
+    font-size: 3rem;
+    font-family: "Yeseva One", cursive;
+    font-weight: 400;
+    color: #56112e;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 2%;
+    grid-row-gap: 3%;
+}
+
+.grid div {
+    width: 30vw;
+}
+
+.grid img {
+    border-radius: 10px;
+    width: 100%;
+    transition: transform 400ms ease-in-out;
+}
+
+.grid img:hover {
+    transform: scale(1.1);
+}
+
+/* about section styles */
+.section1 {
+    background-color: #56112e;
+    display: flex;
+    margin: 8% 0%;
+    padding: 1%;
+    align-items: center;
+    justify-content: center;
+}
+.section1 div {
+    width: 40vw;
+}
+.section1 img {
+    width: 70%;
+}
+.section1 h2 {
+    font-family: "Yeseva One", cursive;
+    font-size: 3rem;
+    font-weight: 400;
+    color: #ffd8ad;
+}
+.section1 h2 span {
+    color: #ffd8ad;
+}
+.section1 p {
+    padding: 2% 0%;
+    font-size: 1.1rem;
+    font-family: "Montserrat", sans-serif;
+    color: #ffd8ad;
+}
+.btn a {
+    margin: auto;
+    width: fit-content;
+    padding: 10px 20px;
+    border: none;
+    font-size: 1.2rem;
+    font-family: "Yeseva One", cursive;
+    font-weight: 400;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    transition: all 400ms ease-in-out;
+    color: #56112e;
+    text-decoration: none;
+    background: #ffd8ad;
+}
+.btn a:hover {
+    color: black;
+}
+/* footer style */
+footer {
+    background-color: #56112e;
+    margin-top: 2%;
+    padding: 1% 2%;
+    height: auto;
+    width: 100%;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #ffd8ad;
+}
+footer a {
+    text-decoration: none;
+    color: #ffd8ad;
+    transition: all 400ms ease-in-out;
+}
+footer a:hover {
+    color: black;
+}
+footer p {
+    padding-top: 10px;
+}
+footer .copy {
+    text-align: center;
+}
+.subscription-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 84px;
+}
+
+.subscription-box h2 {
+    font-weight: bold;
+    font-size: 24px;
+    color: #56112e;
+    margin-bottom: 10px;
+}
+
+.subscription-box p {
+    font-size: 16px;
+    color: #56112e;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.email-input {
+    padding: 10px;
+    width: 250px;
+    border: 1px solid #56112e;
+    border-radius: 5px;
+    outline: none;
+}
+
+.subscribe-btn {
+    padding: 10px 20px;
+    background-color: #56112e;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.subscribe-btn:hover {
+    background-color: #46131e;
+}
+
+@media only screen and (max-width: 1204px) {
+    .section1 {
+        flex-direction: column;
+        margin: 8% 0%;
+    }
+    .section1 div {
+        width: 94vw;
+        margin: auto;
+    }
+    .section1 img {
+        width: 40%;
+        margin-inline: 20%;
+    }
+    .section1 h2 {
+        font-size: 2rem;
+    }
+    .section1 p {
+        font-size: 1rem;
+    }
+    .section2 {
+        padding: auto 5%;
+        height: 50vh;
+    }
+    .section2 .quote {
+        font-size: 1.8rem;
+    }
+    .section3 h1 {
+        font-size: 2rem;
+    }
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 2%;
+        grid-row-gap: 1%;
+    }
+    .grid div {
+        width: 46vw;
+    }
+    .grid img:hover {
+        transform: scale(1);
+    }
+}

@@ -1,0 +1,89 @@
+.res {
+  margin: 2% auto;
+  font-family: "Montserrat", sans-serif;
+}
+.res h1 {
+  text-align: center;
+  font-family: "Yeseva One", cursive;
+  font-weight: 400;
+  font-size: 2.8rem;
+  color: #56112e;
+  margin: 1%;
+}
+.res p {
+  text-align: center;
+  padding: 1% 10%;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+.form {
+  width: 70%;
+  margin: 0 auto;
+  padding: 1%;
+}
+div.elem-group {
+  margin: 20px auto;
+}
+div.elem-group.inlined {
+  width: 49%;
+  display: inline-block;
+}
+label {
+  display: block;
+  font-weight: lighter;
+  padding-bottom: 10px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #56112e;
+}
+input,
+select,
+textarea {
+  border-radius: 2px;
+  border: 2px solid #56112e;
+  font-size: 1.25rem;
+  width: 100%;
+  padding: 10px;
+  background-color: transparent;
+}
+div.elem-group.inlined input {
+  width: 95%;
+  display: inline-block;
+}
+textarea {
+  height: auto;
+  width: 49%;
+}
+button {
+  margin: auto;
+  width: fit-content;
+  padding: 10px 20px;
+  border: none;
+  font-size: 1.2rem;
+  font-family: "Yeseva One", cursive;
+  font-weight: 400;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  transition: all 400ms ease-in-out;
+  color: #ffd8ad;
+  text-decoration: none;
+  background-color: #56112e;
+}
+button:hover {
+  color: black;
+}
+@media only screen and (max-width: 1204px) {
+  .form {
+    width: 85%;
+  }
+  .res h1 {
+    font-size: 2.4rem;
+  }
+  .res p {
+    font-size: 1rem;
+  }
+  button{
+    padding: 4%;
+  }
+}
