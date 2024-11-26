@@ -1,6 +1,4 @@
-@extends('layouts.app')
-
-@section('title', 'Menu')
+@extends('layouts.web')
 
 @section('content')
 
@@ -10,6 +8,7 @@
     <h2>Menu</h2>
     <p>OUR FOOD IS SKILLFULLY PREPARED BY OUR TALENTED KITCHEN TEAM</p>
   </div>
+
   <div>
     <p>
       Welcome to The Elysian Plate, a Pakistani restaurant featuring authentic
@@ -23,6 +22,7 @@
     </p>
   </div>
 </div>
+
 
 <!-- Main Dishes Section -->
 <div class="main">

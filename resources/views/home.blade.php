@@ -1,9 +1,6 @@
-@extends('layouts.app')
 
-@section('title', 'Home')
-
+@extends('layouts.web')
 @section('content')
-
 <!-- Carousel Section -->
 <div id="carouselExampleCaptions" class="carousel slide">
   <!-- Carousel Indicators -->
@@ -97,5 +94,4 @@
     </div>
   </div>
 </section>
-
 @endsection

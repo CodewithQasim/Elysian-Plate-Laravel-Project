@@ -1,18 +1,47 @@
 <?php
 
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\PageController;
+use App\Http\Controllers\MenuItemController;
 use Illuminate\Support\Facades\Route;
 
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+});
 Route::get('/', function () {
-    return view('welcome');
+return view('home'); 
+return view('layouts.web'); 
+})->name('home');
+Route::get('/menu', function () {
+    return view('menu'); 
+})->name('menu');
+// Route::get('/order', function () {
+//     return view('order'); 
+// })->name('order');
+Route::get('/contact', function () {
+    return view('contact'); 
+})->name('contact');
+// Route::get('/', [PageController::class, 'home'])->name('home');
+// Route::get('/menu', [PageController::class, 'menu'])->name('menu');
+// Route::get('/contact', [PageController::class, 'contact'])->name('contact');
+
+// Order Route (Handled by MenuItemController)
+Route::get('/order', [MenuItemController::class, 'showOrderPage'])->name('order');
+
+// MenuItem CRUD Routes (Admin Panel)
+Route::prefix('menu-items')->group(function () {
+    Route::get('/', [MenuItemController::class, 'index'])->name('menu-items.index');
+    Route::get('/create', [MenuItemController::class, 'create'])->name('menu-items.create');
+    Route::post('/', [MenuItemController::class, 'store'])->name('menu-items.store');
+    Route::get('/{id}/edit', [MenuItemController::class, 'edit'])->name('menu-items.edit');
+    Route::patch('/{id}', [MenuItemController::class, 'update'])->name('menu-items.update');
+    Route::delete('/{id}', [MenuItemController::class, 'destroy'])->name('menu-items.destroy');
 });
 
-// Home Page Route
-Route::get('/', [App\Http\Controllers\PageController::class, 'home'])->name('home');
-
-// Menu Page Route
-Route::get('/menu', [App\Http\Controllers\PageController::class, 'menu'])->name('menu');
-
-// Contact Page Route
-Route::get('/contact', [App\Http\Controllers\PageController::class, 'contact'])->name('contact');
-
-Route::post('/contact', 'ContactController@submit')->name('contact.submit');
+require __DIR__ . '/auth.php';

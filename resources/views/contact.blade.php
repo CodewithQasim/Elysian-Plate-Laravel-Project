@@ -1,9 +1,5 @@
-@extends('layouts.app')
-
-@section('title', 'Contact Us')
-
+@extends('layouts.web')
 @section('content')
-
 <!-- Reservation Section -->
 <div class="res">
     <h1>Reservation</h1>
@@ -116,5 +112,4 @@
         </form>
     </div>
 </div>
-
 @endsection

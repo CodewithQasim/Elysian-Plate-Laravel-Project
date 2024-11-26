@@ -1,0 +1,16 @@
+h1{
+    color: #56112e;
+}
+.searchContainer{
+    display: flex;
+    gap: 10px;
+}
+.searchContainer select{
+    width: 50%;
+}
+.list-group-item{
+    margin-bottom: 10px;
+    background-color: #56112eea;
+    color: #ffd8ad;
+    border: none;
+}
