@@ -15,13 +15,11 @@
         </div>
         <div class="form-group">
             <label for="category">Category</label>
-            <select name="category" id="category" class="form-control" required>
-                <option value="main">Main Dishes</option>
-                <option value="Soups">Soups</option>
-                <option value="Our Speciality">Our Speciality</option>
-                <option value="appetizer">Appetizers</option>
-                <option value="dessert">Desserts</option>
-                <option value="Drinks">Drinks</option>
+            <select name="category_id" id="category_id" class="form-control" required>
+                <option value="" disabled selected>Select a category</option>
+                @foreach ($categories as $category)
+                    <option value="{{ $category->id }}">{{ $category->name }}</option>
+                @endforeach
             </select>
         </div>
         <button type="submit" class="btn btn-success">Save</button>

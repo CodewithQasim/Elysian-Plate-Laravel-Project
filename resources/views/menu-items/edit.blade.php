@@ -16,13 +16,19 @@
         </div>
         <div class="form-group">
             <label for="category">Category</label>
-            <select name="category" id="category" class="form-control" required>
-                <option value="main" {{ $menuItem->category == 'main' ? 'selected' : '' }}>main</option>
-                <option value="Soups" {{ $menuItem->category == 'Soups' ? 'selected' : '' }}>Soups</option>
-                <option value="Our Speciality" {{ $menuItem->category == 'Our Speciality' ? 'selected' : '' }}>Our Speciality</option>
-                <option value="appetizers" {{ $menuItem->category == 'appetizers' ? 'selected' : '' }}>Appetizers</option>
-                <option value="desserts" {{ $menuItem->category == 'desserts' ? 'selected' : '' }}>Desserts</option>
-                <option value="Drinks" {{ $menuItem->category == 'drinks' ? 'selected' : '' }}>Drinks</option>
+            <select 
+                name="category_id" 
+                id="category_id" 
+                class="form-control" 
+                required>
+                <option value="" disabled>Select a category</option>
+                @foreach ($categories as $category)
+                    <option 
+                        value="{{ $category->id }}" 
+                        {{ $menuItem->category_id == $category->id ? 'selected' : '' }}>
+                        {{ $category->name }}
+                    </option>
+                @endforeach
             </select>
         </div>
         <button type="submit" class="btn btn-success">Update</button>

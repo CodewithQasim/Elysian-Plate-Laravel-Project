@@ -14,11 +14,11 @@
             </tr>
         </thead>
         <tbody>
-            @foreach ($menuItems as $item)
+        @foreach ($menuItems as $item)
                 <tr>
                     <td>{{ $item->name }}</td>
                     <td>RS {{ $item->price }}</td>
-                    <td>{{ $item->category }}</td>
+                    <td>{{ $item->category->name ?? 'N/A' }}</td> <!-- Updated category display -->
                     <td>
                         <a href="{{ route('menu-items.edit', $item->id) }}" class="btn btn-sm btn-warning">Edit</a>
                         <form action="{{ route('menu-items.destroy', $item->id) }}" method="POST" style="display:inline;">
