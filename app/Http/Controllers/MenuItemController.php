@@ -39,7 +39,16 @@ class MenuItemController extends Controller
             'name' => 'required',
             'price' => 'required|numeric',
             'category_id' => 'required|exists:categories,id', // Ensure the category exists
+            'image' => 'required|image|mimes:jpg,jpeg,png,gif|max:2048',
         ]);
+    
+        // Handle image upload
+        if ($request->hasFile('image')) {
+            $image = $request->file('image');
+            $fileName = time() . '.' . $image->getClientOriginalExtension(); // Example: 1696601234.jpg
+            $image->move(public_path('images'), $fileName); // Save image to public/images
+            $validated['image'] = 'images/' . $fileName; // Save path to the database
+        }
 
         MenuItem::create($validated);
         return redirect()->route('menu-items.index')->with('success', 'Menu item added successfully!');
@@ -62,9 +71,18 @@ class MenuItemController extends Controller
             'name' => 'required',
             'price' => 'required|numeric',
             'category_id' => 'required|exists:categories,id', // Ensure the category exists
+            'image' => 'nullable|image|mimes:jpg,jpeg,png,gif|max:2048',
         ]);
 
         $menuItem = MenuItem::findOrFail($id);
+
+        if ($request->hasFile('image')) {
+            $image = $request->file('image');
+            $fileName = time() . '.' . $image->getClientOriginalExtension(); // Example: 1696601234.jpg
+            $image->move(public_path('images'), $fileName); // Save image to public/images
+            $validated['image'] = 'images/' . $fileName; // Save path to the database
+        }
+    
         $menuItem->update($validated);
         return redirect()->route('menu-items.index')->with('success', 'Menu item updated successfully!');
     }

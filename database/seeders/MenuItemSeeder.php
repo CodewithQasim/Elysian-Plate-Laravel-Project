@@ -13,141 +13,134 @@ class MenuItemSeeder extends Seeder
      * @return void
      */
     public function run()
-    {
-        $menuItems = [
-            // Main Dishes
-            [
-                'name' => 'Chicken Biryani',
-                'description' => 'Spicy and flavorful chicken biryani.',
-                'price' => 400,
-                'category' => 'main',
-            ],
-            [
-                'name' => 'Chicken Karahi',
-                'description' => 'Delicious and creamy chicken karahi.',
-                'price' => 450,
-                'category' => 'main',
-            ],
-            [
-                'name' => 'Beef Nihari',
-                'description' => 'Rich and tender beef nihari.',
-                'price' => 550,
-                'category' => 'main',
-            ],
-            [
-                'name' => 'Chicken Jalfrezi',
-                'description' => 'Tangy and spicy chicken jalfrezi.',
-                'price' => 400,
-                'category' => 'main',
-            ],
-            [
-                'name' => 'Chicken Korma',
-                'description' => 'Traditional and aromatic chicken korma.',
-                'price' => 450,
-                'category' => 'main',
-            ],
-            [
-                'name' => 'Chicken Bar B Que',
-                'description' => 'Perfectly grilled chicken BBQ.',
-                'price' => 600,
-                'category' => 'main',
-            ],
-            [
-                'name' => 'Haleem',
-                'description' => 'Rich and flavorful haleem.',
-                'price' => 500,
-                'category' => 'main',
-            ],
-            [
-                'name' => 'Nihari',
-                'description' => 'Delicious and spicy nihari.',
-                'price' => 550,
-                'category' => 'main',
-            ],
-            // Appetizers
-            [
-                'name' => 'Samosas (2 pieces)',
-                'description' => 'Crispy and spicy samosas.',
-                'price' => 80,
-                'category' => 'appetizer',
-            ],
-            [
-                'name' => 'Pakoras',
-                'description' => 'Golden fried pakoras.',
-                'price' => 100,
-                'category' => 'appetizer',
-            ],
-            [
-                'name' => 'Chaat',
-                'description' => 'Tangy and flavorful chaat.',
-                'price' => 100,
-                'category' => 'appetizer',
-            ],
-            // Soups
-            [
-                'name' => 'Chicken Corn Soup',
-                'description' => 'Warm and comforting chicken corn soup.',
-                'price' => 250,
-                'category' => 'Soups',
-            ],
-            [
-                'name' => 'Cream of Mushroom Soup',
-                'description' => 'Rich and creamy mushroom soup.',
-                'price' => 250,
-                'category' => 'Soups',
-            ],
-            // Desserts
-            [
-                'name' => 'Kheer',
-                'description' => 'Sweet and creamy rice pudding.',
-                'price' => 150,
-                'category' => 'dessert',
-            ],
-            [
-                'name' => 'Gulab Jamun',
-                'description' => 'Soft and syrupy gulab jamun.',
-                'price' => 200,
-                'category' => 'dessert',
-            ],
-            // Drinks
-            [
-                'name' => 'Dark Hot Chocolate',
-                'description' => 'Rich and velvety dark hot chocolate.',
-                'price' => 100,
-                'category' => 'Drinks',
-            ],
-            [
-                'name' => 'Brewed Coffee',
-                'description' => 'Freshly brewed coffee.',
-                'price' => 80,
-                'category' => 'Drinks',
-            ],
-            [
-                'name' => 'Cherry Smoothie',
-                'description' => 'Refreshing cherry smoothie.',
-                'price' => 200,
-                'category' => 'Drinks',
-            ],
-            [
-                'name' => 'Mango Smoothie',
-                'description' => 'Tropical mango smoothie.',
-                'price' => 200,
-                'category' => 'Drinks',
-            ],
-            // Our Speciality
-            [
-                'name' => 'Royal Chocolate Cake',
-                'description' => 'Decadent chocolate cake with royal icing.',
-                'price' => 1000,
-                'category' => 'Our Speciality',
-            ],
-            [
-                'name' => 'Housemade Granola',
-                'description' => 'Healthy and nutritious housemade granola.',
-                'price' => 1000,
-                'category' => 'Our Speciality',
-            ],
-        ];
+    {$menuItems = [
+        [
+            'name' => 'Chicken Biryani',
+            'price' => 400,
+            'category_id' => 1,
+            'image' => 'images/chicken-biryani.jpg'
+        ],
+        [
+            'name' => 'Chicken Karahi',
+            'price' => 450,
+            'category_id' => 1,
+            'image' => 'images/chicken-karahi.jpg'
+        ],
+        [
+            'name' => 'Beef Nihari',
+            'price' => 550,
+            'category_id' => 1,
+            'image' => 'images/beef-nihari.jpg'
+        ],
+        [
+            'name' => 'Chicken Jalfrezi',
+            'price' => 400,
+            'category_id' => 1,
+            'image' => 'images/chicken-jalfrezi.jpg'
+        ],
+        [
+            'name' => 'Chicken Korma',
+            'price' => 450,
+            'category_id' => 1,
+            'image' => 'images/chicken-korma.jpg'
+        ],
+        [
+            'name' => 'Chicken Bar B Que',
+            'price' => 600,
+            'category_id' => 1,
+            'image' => 'images/chicken-bar-b-que.jpg'
+        ],
+        [
+            'name' => 'Haleem',
+            'price' => 500,
+            'category_id' => 1,
+            'image' => 'images/haleem.jpg'
+        ],
+        [
+            'name' => 'Nihari',
+            'price' => 550,
+            'category_id' => 1,
+            'image' => 'images/nihari.jpg'
+        ],
+        [
+            'name' => 'Samosas (2 pieces)',
+            'price' => 80,
+            'category_id' => 2,
+            'image' => 'images/samosas.jpg'
+        ],
+        [
+            'name' => 'Pakoras',
+            'price' => 100,
+            'category_id' => 2,
+            'image' => 'images/pakoras.jpg'
+        ],
+        [
+            'name' => 'Chaat',
+            'price' => 100,
+            'category_id' => 2,
+            'image' => 'images/chaat.jpg'
+        ],
+        [
+            'name' => 'Chicken Corn Soup',
+            'price' => 250,
+            'category_id' => 3,
+            'image' => 'images/chicken-corn-soup.jpg'
+        ],
+        [
+            'name' => 'Cream of Mushroom Soup',
+            'price' => 250,
+            'category_id' => 3,
+            'image' => 'images/cream-of-mushroom-soup.jpg'
+        ],
+        [
+            'name' => 'Kheer',
+            'price' => 150,
+            'category_id' => 4,
+            'image' => 'images/kheer.jpg'
+        ],
+        [
+            'name' => 'Gulab Jamun',
+            'price' => 200,
+            'category_id' => 4,
+            'image' => 'images/gulab-jamun.jpg'
+        ],
+        [
+            'name' => 'Dark Hot Chocolate',
+            'price' => 100,
+            'category_id' => 5,
+            'image' => 'images/dark-hot-chocolate.jpg'
+        ],
+        [
+            'name' => 'Brewed Coffee',
+            'price' => 80,
+            'category_id' => 5,
+            'image' => 'images/brewed-coffee.jpg'
+        ],
+        [
+            'name' => 'Cherry Smoothie',
+            'price' => 200,
+            'category_id' => 5,
+            'image' => 'images/cherry-smoothie.jpg'
+        ],
+        [
+            'name' => 'Mango Smoothie',
+            'price' => 200,
+            'category_id' => 5,
+            'image' => 'images/mango-smoothie.jpg'
+        ],
+        [
+            'name' => 'Royal Chocolate Cake',
+            'price' => 1000,
+            'category_id' => 6,
+            'image' => 'images/royal-chocolate-cake.jpg'
+        ],
+        [
+            'name' => 'Housemade Granola',
+            'price' => 1000,
+            'category_id' => 6,
+            'image' => 'images/housemade-granola.jpg'
+        ],
+    ];
 
         foreach ($menuItems as $item) {
             MenuItem::create($item);

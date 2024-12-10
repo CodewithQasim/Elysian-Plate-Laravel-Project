@@ -32,6 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
                   const card = `
                       <div class="col-md-4 mb-4 recipe-card" data-category="${item.category_id}">
                           <div class="card">
+                          <img src="${item.image}" class="card-img-top" alt="${item.name}">
                               <div class="card-body">
                                   <h5 class="card-title"><strong>${item.name}</strong></h5>
                                   <p class="card-text"><strong>Price:</strong> RS ${item.price}/-</p>
